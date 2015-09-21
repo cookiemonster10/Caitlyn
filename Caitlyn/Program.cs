@@ -84,7 +84,7 @@ namespace Caitlyn
         {
             if (Orbwalker.ActiveModesFlags == Orbwalker.ActiveModes.Harass) do_Haress();
             if (Orbwalker.ActiveModesFlags == Orbwalker.ActiveModes.Combo) do_Combo();
-            if (!SettingsMenu["Dash"].Cast<KeyBind>().CurrentValue) Dash_To_Mouse();
+            if (SettingsMenu["Dash"].Cast<KeyBind>().CurrentValue) Dash_To_Mouse();
             if (SettingsMenu["Auto Ult"].Cast<CheckBox>().CurrentValue) Ult_Anyone();
             if (SettingsMenu["Smart W"].Cast<CheckBox>().CurrentValue) SmartW();
             if (SettingsMenu["Smart Q"].Cast<CheckBox>().CurrentValue) SmartQ();
